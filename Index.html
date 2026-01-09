@@ -1,0 +1,172 @@
+                    <p>"The best free resource we've found. It's not just a teaser; they actually teach the difficult concepts clearly. We are definitely signing up for the full year!"</p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--gold);">- Michael P. (Grade 10 Parent)</p>
+                </div>
+                
+                <!-- Extra Review for balance -->
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"I was failing Maths in Term 4. The Kickstart classes gave me hope again. The tutors are young and actually understand how to explain things."</p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--gold);">- Thando N. (Learner)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section container">
+        <div class="text-center" style="margin-bottom: 40px;">
+            <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Is the January Kickstart really 100% free?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Yes! There are no hidden costs for the January Kickstart. It is our way of introducing you to the Maths Mate teaching style. If you love it, you can join our paid classes later, but there is no obligation.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Where do the classes take place?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>All classes are held online via Zoom/Google Meet. You will receive the links in the exclusive WhatsApp group once you register.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>What grades do you cover?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>For this specific Kickstart, we are focusing on Grades 8, 9, 10, 11, and 12 (Core Maths & Literacy).</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>What if I miss a live class?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Don't worry! All sessions are recorded and uploaded to a private drive. You will have access to these recordings for the duration of the Kickstart.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section text-center" style="background: linear-gradient(to top, var(--darker-bg), #0f172a);">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to Ace 2024?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">The spots are filling up faster than we expected.</p>
+            <a href="https://chat.whatsapp.com/G2Oq8YcPAcvIDJB2hUNKO2" class="btn-main">
+                <i class="fab fa-whatsapp"></i> Join The WhatsApp Group
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="border-top: 1px solid var(--glass-border); padding: 40px 0; background: var(--darker-bg);">
+        <div class="container text-center">
+            <h3 style="color: var(--gold); margin-bottom: 10px;">Maths Mate</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Making Maths Simple, Fun, and Achievable.</p>
+            <div style="margin-top: 20px; font-size: 1.5rem;">
+                <a href="#" style="color: var(--text-main); margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: var(--text-main); margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: var(--text-main); margin: 0 10px;"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.8rem; color: #475569;">&copy; 2024 Maths Mate Tutoring. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://chat.whatsapp.com/G2Oq8YcPAcvIDJB2hUNKO2" class="floating-wa" target="_blank" title="Chat with us">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        // --- ACCORDION LOGIC ---
+        const accHeaders = document.querySelectorAll('.accordion-header');
+
+        accHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('i');
+                
+                // Close others
+                document.querySelectorAll('.accordion-content').forEach(c => {
+                    if(c !== content) {
+                        c.style.maxHeight = null;
+                        c.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                        c.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+                    }
+                });
+
+                // Toggle current
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+        // --- FAKE COUNTDOWN TIMER ---
+        // Sets a timer for 4 hours from now to create urgency
+        function startTimer(duration, display) {
+            var timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var fourHours = 60 * 60 * 4;
+            var display = document.querySelector('#countdown');
+            startTimer(fourHours, display);
+        };
+
+        // --- DYNAMIC SPOTS SIMULATOR ---
+        // Slowly decreases the Grade 8 spots number to simulate bookings
+        const spotsElement = document.getElementById('spots');
+        let currentSpots = 19;
+        
+        setInterval(() => {
+            // Only decrease if above 3
+            if(currentSpots > 3 && Math.random() > 0.7) { 
+                currentSpots--;
+                spotsElement.style.opacity = 0; // Flash effect
+                setTimeout(() => {
+                    spotsElement.textContent = currentSpots;
+                    spotsElement.style.opacity = 1;
+                }, 200);
+            }
+        }, 15000); // Check every 15 seconds
+    </script>
+
+</body>
+</html>
