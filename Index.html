@@ -1,172 +1,263 @@
-                    <p>"The best free resource we've found. It's not just a teaser; they actually teach the difficult concepts clearly. We are definitely signing up for the full year!"</p>
-                    <p style="margin-top: 15px; font-weight: bold; color: var(--gold);">- Michael P. (Grade 10 Parent)</p>
-                </div>
-                
-                <!-- Extra Review for balance -->
-                <div class="review-card">
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"I was failing Maths in Term 4. The Kickstart classes gave me hope again. The tutors are young and actually understand how to explain things."</p>
-                    <p style="margin-top: 15px; font-weight: bold; color: var(--gold);">- Thando N. (Learner)</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Queen | Bianca Karabo Mkhawani</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-    <!-- FAQ SECTION -->
-    <section class="section container">
-        <div class="text-center" style="margin-bottom: 40px;">
-            <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
-        </div>
-
-        <div style="max-width: 800px; margin: 0 auto;">
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>Is the January Kickstart really 100% free?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="accordion-content">
-                    <p>Yes! There are no hidden costs for the January Kickstart. It is our way of introducing you to the Maths Mate teaching style. If you love it, you can join our paid classes later, but there is no obligation.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>Where do the classes take place?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="accordion-content">
-                    <p>All classes are held online via Zoom/Google Meet. You will receive the links in the exclusive WhatsApp group once you register.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>What grades do you cover?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="accordion-content">
-                    <p>For this specific Kickstart, we are focusing on Grades 8, 9, 10, 11, and 12 (Core Maths & Literacy).</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>What if I miss a live class?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="accordion-content">
-                    <p>Don't worry! All sessions are recorded and uploaded to a private drive. You will have access to these recordings for the duration of the Kickstart.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="section text-center" style="background: linear-gradient(to top, var(--darker-bg), #0f172a);">
-        <div class="container">
-            <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to Ace 2024?</h2>
-            <p style="color: var(--text-muted); margin-bottom: 30px;">The spots are filling up faster than we expected.</p>
-            <a href="https://chat.whatsapp.com/G2Oq8YcPAcvIDJB2hUNKO2" class="btn-main">
-                <i class="fab fa-whatsapp"></i> Join The WhatsApp Group
-            </a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer style="border-top: 1px solid var(--glass-border); padding: 40px 0; background: var(--darker-bg);">
-        <div class="container text-center">
-            <h3 style="color: var(--gold); margin-bottom: 10px;">Maths Mate</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Making Maths Simple, Fun, and Achievable.</p>
-            <div style="margin-top: 20px; font-size: 1.5rem;">
-                <a href="#" style="color: var(--text-main); margin: 0 10px;"><i class="fab fa-instagram"></i></a>
-                <a href="#" style="color: var(--text-main); margin: 0 10px;"><i class="fab fa-facebook"></i></a>
-                <a href="#" style="color: var(--text-main); margin: 0 10px;"><i class="fab fa-tiktok"></i></a>
-            </div>
-            <p style="margin-top: 30px; font-size: 0.8rem; color: #475569;">&copy; 2024 Maths Mate Tutoring. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://chat.whatsapp.com/G2Oq8YcPAcvIDJB2hUNKO2" class="floating-wa" target="_blank" title="Chat with us">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- SCRIPTS -->
-    <script>
-        // --- ACCORDION LOGIC ---
-        const accHeaders = document.querySelectorAll('.accordion-header');
-
-        accHeaders.forEach(header => {
-            header.addEventListener('click', () => {
-                const content = header.nextElementSibling;
-                const icon = header.querySelector('i');
-                
-                // Close others
-                document.querySelectorAll('.accordion-content').forEach(c => {
-                    if(c !== content) {
-                        c.style.maxHeight = null;
-                        c.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
-                        c.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
-                    }
-                });
-
-                // Toggle current
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                    icon.classList.remove('fa-chevron-up');
-                    icon.classList.add('fa-chevron-down');
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    icon.classList.remove('fa-chevron-down');
-                    icon.classList.add('fa-chevron-up');
-                }
-            });
-        });
-
-        // --- FAKE COUNTDOWN TIMER ---
-        // Sets a timer for 4 hours from now to create urgency
-        function startTimer(duration, display) {
-            var timer = duration, hours, minutes, seconds;
-            setInterval(function () {
-                hours = parseInt(timer / 3600, 10);
-                minutes = parseInt((timer % 3600) / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                hours = hours < 10 ? "0" + hours : hours;
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = hours + ":" + minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = duration;
-                }
-            }, 1000);
+    <style>
+        :root {
+            --primary: #ff4d6d;
+            --secondary: #ffb3c1;
+            --bg: #fff0f3;
+            --text: #590d22;
         }
 
-        window.onload = function () {
-            var fourHours = 60 * 60 * 4;
-            var display = document.querySelector('#countdown');
-            startTimer(fourHours, display);
-        };
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        // --- DYNAMIC SPOTS SIMULATOR ---
-        // Slowly decreases the Grade 8 spots number to simulate bookings
-        const spotsElement = document.getElementById('spots');
-        let currentSpots = 19;
-        
-        setInterval(() => {
-            // Only decrease if above 3
-            if(currentSpots > 3 && Math.random() > 0.7) { 
-                currentSpots--;
-                spotsElement.style.opacity = 0; // Flash effect
-                setTimeout(() => {
-                    spotsElement.textContent = currentSpots;
-                    spotsElement.style.opacity = 1;
-                }, 200);
+        body {
+            background-color: var(--bg);
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- BACKGROUND ANIMATION --- */
+        .heart-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* --- GLASS CARD --- */
+        .container {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            padding: 3rem;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(255, 77, 109, 0.15);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            z-index: 10;
+        }
+
+        .profile-section {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .heart-icon {
+            color: var(--primary);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #800f2f;
+        }
+
+        .name-highlight {
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            height: 60px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 12px 35px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-yes {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 10px 20px rgba(255, 77, 109, 0.3);
+        }
+
+        .btn-yes:hover {
+            transform: scale(1.1);
+            background: #ff758f;
+        }
+
+        .btn-no {
+            background: #fff;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            position: absolute;
+        }
+
+        /* --- SUCCESS STATE --- */
+        #success-msg {
+            display: none;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart-bg" id="heart-bg"></div>
+
+    <div class="container" id="main-card">
+        <div class="profile-section">
+            <i data-lucide="heart" class="heart-icon" size="64" fill="#ff4d6d"></i>
+        </div>
+
+        <div id="question-content">
+            <p>To my beautiful Queen,</p>
+            <h1>Bianca Karabo Mkhawani</h1>
+            <p>Every moment with you feels like a beautiful dream I never want to wake up from. You make my world brighter just by being in it.</p>
+            
+            <p style="font-weight: 600;">Will you be my Valentine?</p>
+
+            <div class="btn-group">
+                <button class="btn btn-yes" onclick="celebrate()">YES!</button>
+                <button class="btn btn-no" id="no-btn">No</button>
+            </div>
+        </div>
+
+        <div id="success-msg">
+            <h1 style="font-size: 4rem;">YES! 💖</h1>
+            <p>I am the luckiest man alive. I can't wait to make this Valentine's Day as beautiful as you are.</p>
+            <p class="name-highlight">Forever Yours, <br> Sipho Vukeya</p>
+            <i data-lucide="sparkles" class="text-primary" size="32"></i>
+        </div>
+
+        <div class="footer">
+            Made with ❤️ by Sipho Vukeya
+        </div>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Heart Rain Logic
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart-particle');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'absolute';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '-20px';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            heart.style.opacity = Math.random();
+            heart.style.transform = `rotate(${Math.random() * 360}deg)`;
+            
+            const duration = Math.random() * 3 + 2;
+            heart.style.transition = `all ${duration}s linear`;
+            
+            document.getElementById('heart-bg').appendChild(heart);
+
+            setTimeout(() => {
+                heart.style.top = '110vh';
+            }, 100);
+
+            setTimeout(() => {
+                heart.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(createHeart, 300);
+
+        // Runaway No Button Logic
+        const noBtn = document.getElementById('no-btn');
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            
+            noBtn.style.left = `${Math.random() * 200 - 100}px`;
+            noBtn.style.top = `${Math.random() * 200 - 100}px`;
+        });
+
+        // Yes Button Success Logic
+        function celebrate() {
+            // Confetti Blast
+            const duration = 15 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+              return Math.random() * (max - min) + min;
             }
-        }, 15000); // Check every 15 seconds
-    </script>
 
+            const interval = setInterval(function() {
+              const timeLeft = animationEnd - Date.now();
+
+              if (timeLeft <= 0) {
+                return clearInterval(interval);
+              }
+
+              const particleCount = 50 * (timeLeft / duration);
+              confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+              confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+            }, 250);
+
+            // Hide Question, Show Success
+            document.getElementById('question-content').style.display = 'none';
+            document.getElementById('success-msg').style.display = 'block';
+            
+            // Change background to more intense pink
+            document.body.style.backgroundColor = "#ffc8dd";
+        }
+    </script>
 </body>
 </html>
